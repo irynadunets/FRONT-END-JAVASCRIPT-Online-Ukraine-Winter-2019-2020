@@ -1,0 +1,39 @@
+$font-freska:   'Fresca';
+$font-hind:    'Hind';
+$font-sans:    'Source Sans Pro';
+$font: $font-freska;
+$vidstup: 80px;
+$sizes: (
+size1: 45%,
+size2: 150%,
+size3: 430%,
+size4: 120%,
+size5: 200%,
+size6: 260%
+);
+$font-bolds: (
+bold1: 300,
+bold4: 400,
+bold5: 500,
+bold6: 600,
+bold7: 700
+);
+$font-style: normal;
+$grey-color: #3d3c3c;
+$white-color: #ffffff;
+$background-color: #2a2638;
+$button-color: #f5e90f;
+$marker: #f50f2d;
+$text: $white-color;
+$card-color: #3e3752;
+$linear-gradient: linear-gradient(45deg,#e3d512,#91034a);
+$none: 0px;
+$height: 720px;
+$width: 1920px;
+$imgpath: '../img/m-h-night.jpg';
+$center: center;
+$right: right;
+$left: left;
+$flex: flex;
+$sizecv: cover;
+$repeatn: no-repeat;

@@ -1,0 +1,361 @@
+
+%nonestyle{
+        outline: $none;
+	padding: $none;
+	margin: $none;
+	border: $none;
+}
+
+@mixin background($imgpath, $repeat: no-repeat, $sizecv: cover ){
+ background: url($imgpath) 113% 50% $repeat;
+ background-size: $sizecv;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin button($bg) {
+  background: $bg;
+  color: $white-color;
+  padding:10px 40px;
+  border-width: 0px;
+  border-radius: 3px;
+  font-family: $font-sans, cursive;
+  font-weight: map-get($font-bolds, bold6);
+  font-size: map-get($sizes, size4);
+}
+
+@mixin link() {
+  color: $white-color;
+  font-weight: map-get($font-bolds, bold7);
+  display: inline-block;
+  text-align: $center;
+  margin-left: 50%;
+  margin-right: 30%;
+  overflow: visible;
+}
+
+@mixin link-button() {
+  @include position(absolute, $top: 133%, $left: 55%);
+  color: $white-color;
+  font-weight: map-get($font-bolds, bold7);
+  font-size: map-get($sizes, size4);
+}
+
+@mixin logo($color){
+  @extend %nonestyle;
+  width: 127px;
+  height: 50px;
+  display: $flex;
+
+img{
+  @extend %nonestyle;
+  width: 45px;
+  height: 45px;
+  margin: 0px 12px 0px 0px;
+  }
+
+p {
+   float: $right;
+   width: 70px;
+   height: 25px;
+   @extend %nonestyle;
+   font-family: $font;
+   font-size: map-get($sizes, size2);
+   font-weight: map-get($font-bolds, bold6);
+   color: $color;
+   margin-top: -2px;
+}
+
+span {
+  float: $right;
+  @extend %nonestyle;
+  width: 70px;
+  text-align: $center;
+  color: $color;
+  font-size: map-get($sizes, size1);
+  font-weight: map-get($font-bolds, bold1);
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+}
+
+body{
+  @extend %nonestyle;
+  background-color: $background-color;
+
+.header{
+  @extend %nonestyle;
+  height: $height;
+  width: $width;
+  @include background($imgpath, $repeatn, $sizecv);
+  border-bottom-right-radius: 50em 18em;
+
+.header-wrap{
+  @extend %nonestyle;
+
+  .landing-logo{
+  @extend %nonestyle;
+  @include logo($text);
+  @include position(absolute, $top: 5%, $left: 21%);
+  }
+
+.header_heading{
+  @include position(absolute, $top: 15%, $left: 20%);
+  font-family:$font-sans;
+  font-weight: map-get($font-bolds, bold7);
+  font-size: map-get($sizes, size3);
+  color: $text;
+  line-height: $vidstup;
+  z-index: 1;
+
+&::before {
+  z-index: -1;
+  content: "";
+  @include position(absolute, $top: 65%, $left: 0%);
+  background-color: $marker;
+  width: 290px;
+  height: 50px;
+ }
+
+}
+
+.header_text{
+  @extend %nonestyle;
+  @include position(absolute, $top: 70%, $left: 20%);
+  margin: $vidstup 0 $vidstup 0;
+  width: 530px;
+  font-family: $font;
+  font-size: 100%;
+  color: $text;
+  line-height: 25px;
+}
+
+div{
+
+.header_button{
+  @include position(absolute, $top: 110%, $left: 20%);
+  margin: $vidstup 0 $vidstup 0;
+  @include button($button-color);
+}
+
+.login{
+  @include link-button();
+}
+
+}
+
+}
+
+}
+
+.section{
+    @extend %nonestyle;
+
+  .section_text{
+    @extend %nonestyle;
+    margin: 3% auto 3% auto;
+    text-align: $center;
+    font-family: $font-hind;
+    font-size: map-get($sizes, size6);
+    font-weight: map-get($font-bolds, bold6);
+    color: $text;
+    width: $width;
+    position: relative;
+    z-index: 1;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    @include position(absolute, $top: 0%, $left: 51%);
+    background-color: $marker;
+    width: 190px;
+    height: 50px;
+  }
+
+  }
+
+.section_card_wrap{
+
+    @extend %nonestyle;
+    padding: 0px 350px;
+    width: 1200px;
+
+.section_card{
+
+    @extend %nonestyle;
+    max-width: 1200px;
+    height: 100%;
+    margin: 20px 25px 20px 25px;
+    padding: 20px 20px 20px 20px;
+    display: $flex;
+    background-color: $card-color;
+    border-radius:5px;
+
+.section_card_img{
+    width: 40%;
+    height: auto;
+    border-radius:4px;
+}
+
+.section_card_right_container{
+
+    width: 60%;
+    font-family: $font;
+    color: $white-color;
+
+.section_card_heading{
+
+    text-align: $center;
+    margin-top: 50px;
+    font-weight: map-get($font-bolds, bold7);
+    font-size: map-get($sizes, size2);
+
+}
+
+.section_card_text{
+
+    font-family: $font;
+    text-align: $left;
+    margin: 0px 40px 0px 40px;
+    padding: 2% 6% 8% 6%;
+    line-height: 25px;
+}
+
+.section_link{
+
+    font-family: $font-hind;
+    color: $white-color;
+    @include link();
+
+}
+
+}
+
+}
+
+}
+
+.section_banner{
+
+    @extend %nonestyle;
+    width: 1200px;
+    margin: 130px 230px 120px 330px;
+    height: 140px;
+    background-color: $text;
+    border-radius:5px;
+    background-image: $linear-gradient;
+    display: $flex;
+    z-index: 1;
+
+.section_banner_text_wrap{
+
+    @extend %nonestyle;
+
+.section_banner_heading{
+
+    @extend %nonestyle;
+    font-family: $font-sans;
+    color: $text;
+    font-size: map-get($sizes, size5);
+    font-weight: map-get($font-bolds, bold6);
+    padding: 20px 150px 20px 150px;
+    position: relative;
+    z-index: 1;
+
+&::before {
+
+    z-index: -1;
+    content: "";
+    @include position(absolute, $top: 12%, $left: 38%);
+    background-color: $marker;
+    width: 70px;
+    height: 50px;
+
+   }
+
+}
+
+.section_banner_text{
+
+    @extend %nonestyle;
+    font-family: $font;
+    color: $white-color;
+    padding: 0px 150px 0px 160px;
+
+  }
+
+  }
+
+.section_banner_button{
+
+    @extend %nonestyle;
+    @include button($button-color);
+    padding: 0px 40px 0px 40px;
+    margin: 45px 0px 45px 0px;
+    @include position(relative, $top: 1%, $left: 17%);
+
+  }
+
+}
+
+}
+
+.footer{
+
+   z-index: -1;
+   @extend %nonestyle;
+   height:240px;
+   width: $width;
+   background-color: $card-color;
+   @include position(absolute, $top: 525%);
+
+.footer-wrap{
+
+  padding: 100px 130px 100px 150px;
+  display: $flex;
+
+.landing-logo{
+
+  @extend %nonestyle;
+  width: 33%;
+  @include logo($white-color);
+  margin-top:  30px;
+
+}
+
+.footer_text{
+
+  @extend %nonestyle;
+  width: 20%;
+  color: $white-color;
+  text-align: $left;
+  font-family: $font;
+  margin: 10px 0px 20px 250px;
+  padding:10px 0px 20px 200px;
+  line-height: 25px;
+
+}
+
+.footer-cr{
+
+  @extend %nonestyle;
+  color: $white-color;
+  width: 33%;
+  text-align: $right;
+  margin: 60px 0px 60px 0px;
+  padding:0px 100px 20px 100px
+
+}
+
+}
+
+}
+
+}
