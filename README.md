@@ -42,4 +42,4 @@ Tools
 JS Patterns
 MVC
 JS Modules
-Javascript unit testing# FRONT-END-JAVASCRIPT-Online-Ukraine-Winter-2019-2020
+Javascript unit testing
