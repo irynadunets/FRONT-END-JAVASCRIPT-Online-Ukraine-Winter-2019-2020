@@ -1,0 +1,104 @@
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+  background: #f6f8f9;
+  font-family: Arial, Tahoma, sans-serif;
+  color: #44525e;
+}
+
+p {
+  margin: 0%;
+  text-align: center;
+  font-size: 32px;
+}
+
+h3 {
+  margin: 40px 0;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ff7013;
+}
+
+
+button {
+  color: #ff7013;
+  font-size: 16px;
+  border-radius: 12px;
+  position: relative;
+  top: 0em;
+  left: 2em;
+}
+
+div {
+  margin: 10px 0;
+}
+
+.mark {
+  position: relative;
+  top: 20px;
+  text-align:right;
+  font-size: 10px;
+  margin-right: 10%;
+}
+
+.section-description {
+  text-align: center;
+}
+
+
+.container{
+  width: 1200px;
+  margin: 45px auto;
+}
+
+.sets-block{
+  margin: 160px 0 10px 0;
+}
+
+.sets-cart{
+  width: 200px;
+  height: 365px;
+  margin: 100px 15px 0 15px;
+  background: #fff;
+  float: left;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sets-cart .sets-term{
+  padding: 1%;
+  margin-top: 70px;
+  color: #43525d;
+}
+
+.sets-cart .definition{
+  padding: 10%;
+  margin-bottom: 20%;
+  color: #ff7013;
+}
+
+.form {
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 50px 50px 50px 50px;
+}
+
+input {
+  vertical-align: middle;
+  margin: 5px 20px 5px 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.btSave button, .btCancel button{
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: grey;
+  border: 1px solid #ddd;
+  color: white;
+}
